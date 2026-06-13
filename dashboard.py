@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 import plotly.express as px
 
-API = "http://localhost:8000"
+API = "https://payment-monitor-production.up.railway.app"
 
 st.title("💳 Payment Monitor Dashboard")
 
