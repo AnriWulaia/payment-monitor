@@ -41,5 +41,5 @@ st.subheader("🚨 Suspicious Transactions (over $10,000)")
 if df_suspicious.empty:
     st.success("No suspicious transactions found")
 else:
-    st.dataframe(df_suspicious.style.highlight_max(subset=["amount"], color="red"),
-                 use_container_width=True)
+    df_suspicious["amount"] = df_suspicious["amount"].map("{:.2f}".format)
+    st.dataframe(df_suspicious, use_container_width=True)
